@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  padding: 0 10px;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: #32B8FC;
+}
+
+.container {
+  width: 450px;
+  padding: 25px;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 5px 30px rgba(0,0,0,0.6);
+}
+
+.gradient-container {
+  height: 220px;
+  width: 100%;
+  border-radius: 7px;
+  background: linear-gradient(to left top, #21D4FD, #B721FF);
+}
+
+.line {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.line :where(.column, button) {
+  width: calc(100% / 2 - 12px);
+}
+
+.select-container {
+  border-radius: 5px;
+  padding: 10px 15px;
+  border: 1px solid #aaa;
+}
+
+select {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background: none;
+  font-family: "Raleway", sans-serif;
+}
+
+.colors-container {
+  margin-left: 60px;
+}
+
+.row {
+    display: flex;
+}
+
+.chosen-color {
+  height: 41px;
+  width: 100%;
+}
+
+.chosen-color:last-child {
+  margin-left: 6px;
+}
+
+textarea {
+  width: 100%;
+  color: #333;
+  font-size: 16px;
+  resize: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-family: "Raleway", sans-serif;
+}
+
+.btn {
+  padding: 15px 0;
+  border: none;
+  outline: none;
+  color: #fff;
+  margin: 0 0 -15px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.refresh {
+  background: #4DBF85;
+}
+
+.refresh:hover {
+  background: #008953;
+}
+
+.copy {
+  background: #32B8FC;
+}
+
+.copy:hover {
+  background: #005B99;
+}
+
+@media screen and (max-width: 430px) {
+  .container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .colors-container {
+    margin-left: 20px;
+  }
+
+  .row :where(.column, button) {
+    width: calc(100% / 2 - 8px);
+  }
+
+  .select-container {
+    padding: 8px 15px;
+  }
+
+  .chosen-color {
+    width: calc(100% / 2 - 5px);
+  }
+
+  .btn {
+    padding: 10px 0;
+    font-size: 17px;
+  }
+
+  select {
+    font-size: 16px;
+  }
+
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🪁Gradient color generator</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body data-aos-easing="ease" data-aos-duration="1500" data-aos-delay="0">
+    <div class="container" data-aos="flip-down" data-aos-duration="1500" data-aos-delay="500">
+        <div class="gradient-container"></div>
+        <div class="line">
+          <div class="column">
+            <p class>Direction</p>
+            <div class="select-container">
+              <select>
+                <option value="to top" selected>Top</option>
+                <option value="to bottom">Bottom</option>
+                <option value="to right">Right</option>
+                <option value="to left">Left</option>
+                <option value="to right top">Right top</option>
+                <option value="to right bottom">Right bottom</option>
+                <option value="to left top">Left top</option>
+                <option value="to left bottom">Left bottom</option>
+              </select>
+            </div>
+          </div>
+          <div class="colors-container column">
+            <p>Colors</p>
+            <div class="row">
+              <input class="chosen-color" type="color" value="#21D4FD">
+              <input class="chosen-color" type="color" value="#B721FF">
+            </div>
+          </div>
+        </div>
+        <textarea class="line" disabled>background-image: linear-gradient(to left top, #21D4FD,  #B721FF);</textarea>
+        <div class="line">
+          <button class="btn refresh">Refresh</button>
+          <button class="btn copy">Copy Code</button>
+        </div>
+      </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="index.js"></script>
+    <script>AOS.init();</script>
+</body>
+</html>
